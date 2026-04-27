@@ -26,7 +26,7 @@ Legend: `[x]` done · `[ ]` pending · `[~]` partially done
 ## Milestone 2 — Basic image utilities
 - [x] `to_grayscale(const Image&)` for RGB / RGBA / already-gray inputs
 - [x] CLI command to save a grayscale copy
-- [ ] Bounds helpers: `in_bounds(x,y)`, `clamp_to_image`
+- [x] Bounds helpers: `in_bounds(x,y)`, `clamp_to_image`
 - [ ] Optional debug PPM writer for quick visual inspection
 
 ## Milestone 3 — Core geometry types
@@ -50,10 +50,10 @@ Legend: `[x]` done · `[ ]` pending · `[~]` partially done
 - [x] Tests with known cameras (identity pose, axis-aligned offsets)
 
 ## Milestone 6 — Brown-Conrady distortion model
-- [ ] Radial term `k1, k2, k3`
-- [ ] Tangential term `p1, p2`
-- [ ] `project_point(world, pose, model)` end-to-end
-- [ ] Test: zero distortion ≡ pinhole projection
+- [x] Radial term `k1, k2, k3`
+- [x] Tangential term `p1, p2`
+- [x] `project_point(world, pose, model)` end-to-end
+- [x] Test: zero distortion ≡ pinhole projection
 
 ## Milestone 7 — Synthetic calibration dataset generator
 - [ ] Generate N camera poses around a target board
