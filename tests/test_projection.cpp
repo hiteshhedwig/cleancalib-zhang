@@ -12,6 +12,13 @@ using clean_calib::calib::normalized_to_pixel;
 using clean_calib::calib::project_pinhole;
 using clean_calib::calib::world_to_camera;
 
+using clean_calib::CameraModel;
+using clean_calib::Distortion;
+
+using clean_calib::calib::distort_normalized;
+using clean_calib::calib::project_point;
+
+
 namespace {
 
 Point3D make_point3(double x, double y, double z) {
@@ -42,6 +49,150 @@ CameraIntrinsics make_intrinsics(double fx,
     k.skew = skew;
     return k;
 }
+
+Distortion make_distortion(double k1,
+                           double k2,
+                           double k3,
+                           double p1,
+                           double p2) {
+    Distortion d;
+    d.k1 = k1;
+    d.k2 = k2;
+    d.k3 = k3;
+    d.p1 = p1;
+    d.p2 = p2;
+    return d;
+}
+
+CameraModel make_camera_model(const CameraIntrinsics& intrinsics,
+                              const Distortion& distortion) {
+    CameraModel camera;
+    camera.intrinsics = intrinsics;
+    camera.distortion = distortion;
+    return camera;
+}
+
+
+CC_TEST(projection_distort_normalized_zero_distortion_changes_nothing) {
+    Point2D normalized = make_point2(0.5, 0.25);
+    Distortion distortion = make_distortion(0.0, 0.0, 0.0, 0.0, 0.0);
+
+    Point2D distorted = distort_normalized(normalized, distortion);
+
+    CC_EXPECT_NEAR(distorted.x, 0.5, 1e-12);
+    CC_EXPECT_NEAR(distorted.y, 0.25, 1e-12);
+}
+
+CC_TEST(projection_distort_normalized_radial_x_axis) {
+    Point2D normalized = make_point2(1.0, 0.0);
+    Distortion distortion = make_distortion(
+        0.1,  // k1
+        0.0,  // k2
+        0.0,  // k3
+        0.0,  // p1
+        0.0   // p2
+    );
+
+    Point2D distorted = distort_normalized(normalized, distortion);
+
+    CC_EXPECT_NEAR(distorted.x, 1.1, 1e-12);
+    CC_EXPECT_NEAR(distorted.y, 0.0, 1e-12);
+}
+
+CC_TEST(projection_distort_normalized_radial_xy) {
+    Point2D normalized = make_point2(1.0, 1.0);
+    Distortion distortion = make_distortion(
+        0.1,  // k1
+        0.0,  // k2
+        0.0,  // k3
+        0.0,  // p1
+        0.0   // p2
+    );
+
+    Point2D distorted = distort_normalized(normalized, distortion);
+
+    CC_EXPECT_NEAR(distorted.x, 1.2, 1e-12);
+    CC_EXPECT_NEAR(distorted.y, 1.2, 1e-12);
+}
+
+CC_TEST(projection_distort_normalized_tangential_only) {
+    Point2D normalized = make_point2(1.0, 1.0);
+    Distortion distortion = make_distortion(
+        0.0,   // k1
+        0.0,   // k2
+        0.0,   // k3
+        0.01,  // p1
+        0.02   // p2
+    );
+
+    Point2D distorted = distort_normalized(normalized, distortion);
+
+    CC_EXPECT_NEAR(distorted.x, 1.10, 1e-12);
+    CC_EXPECT_NEAR(distorted.y, 1.08, 1e-12);
+}
+
+CC_TEST(projection_project_point_zero_distortion_matches_pinhole) {
+    Pose pose;
+
+    CameraIntrinsics k = make_intrinsics(
+        100.0,
+        100.0,
+        320.0,
+        240.0,
+        0.0
+    );
+
+    Distortion distortion = make_distortion(0.0, 0.0, 0.0, 0.0, 0.0);
+    CameraModel camera = make_camera_model(k, distortion);
+
+    Point3D world = make_point3(1.0, 1.0, 1.0);
+
+    Result<Point2D> pinhole_pixel = project_pinhole(world, pose, k);
+    Result<Point2D> distorted_pixel = project_point(world, pose, camera);
+
+    CC_EXPECT_TRUE(pinhole_pixel.ok);
+    CC_EXPECT_TRUE(distorted_pixel.ok);
+
+    CC_EXPECT_NEAR(distorted_pixel.value.x, pinhole_pixel.value.x, 1e-12);
+    CC_EXPECT_NEAR(distorted_pixel.value.y, pinhole_pixel.value.y, 1e-12);
+}
+
+CC_TEST(projection_project_point_with_radial_distortion) {
+    Pose pose;
+
+    CameraIntrinsics k = make_intrinsics(
+        100.0,
+        100.0,
+        320.0,
+        240.0,
+        0.0
+    );
+
+    Distortion distortion = make_distortion(
+        0.1,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+    );
+
+    CameraModel camera = make_camera_model(k, distortion);
+
+    Point3D world = make_point3(1.0, 0.0, 1.0);
+
+    Result<Point2D> pixel = project_point(world, pose, camera);
+
+    CC_EXPECT_TRUE(pixel.ok);
+
+    // normalized = (1, 0)
+    // radial = 1.1
+    // distorted normalized = (1.1, 0)
+    // pixel x = 100 * 1.1 + 320 = 430
+    // pixel y = 240
+    CC_EXPECT_NEAR(pixel.value.x, 430.0, 1e-12);
+    CC_EXPECT_NEAR(pixel.value.y, 240.0, 1e-12);
+}
+
 
 CC_TEST(projection_world_to_camera_identity_pose) {
     Pose pose;
@@ -220,4 +371,23 @@ void register_projection_tests() {
 
     registry().push_back({"projection.project_pinhole_rejects_point_behind_camera",
                           projection_project_pinhole_rejects_point_behind_camera});
+
+    registry().push_back({"projection.distort_normalized_zero_distortion_changes_nothing",
+                      projection_distort_normalized_zero_distortion_changes_nothing});
+
+    registry().push_back({"projection.distort_normalized_radial_x_axis",
+                        projection_distort_normalized_radial_x_axis});
+
+    registry().push_back({"projection.distort_normalized_radial_xy",
+                        projection_distort_normalized_radial_xy});
+
+    registry().push_back({"projection.distort_normalized_tangential_only",
+                        projection_distort_normalized_tangential_only});
+
+    registry().push_back({"projection.project_point_zero_distortion_matches_pinhole",
+                        projection_project_point_zero_distortion_matches_pinhole});
+
+    registry().push_back({"projection.project_point_with_radial_distortion",
+                        projection_project_point_with_radial_distortion});
+                        
 }
