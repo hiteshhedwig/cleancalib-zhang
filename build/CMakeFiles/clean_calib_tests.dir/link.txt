@@ -1,0 +1,1 @@
+/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/clean_calib_tests.dir/tests/test_main.cpp.o CMakeFiles/clean_calib_tests.dir/tests/test_checkerboard.cpp.o CMakeFiles/clean_calib_tests.dir/tests/test_image_io.cpp.o CMakeFiles/clean_calib_tests.dir/tests/test_camera_types.cpp.o CMakeFiles/clean_calib_tests.dir/tests/test_image_utils.cpp.o -o clean_calib_tests  libclean_calib.a 
