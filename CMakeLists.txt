@@ -45,6 +45,7 @@ add_library(clean_calib
   src/image/image_io.cpp
   src/image/image_utils.cpp
   src/synthetic/checkerboard.cpp
+  src/calib/projection.cpp
 )
 
 target_include_directories(clean_calib PUBLIC
@@ -71,6 +72,7 @@ add_executable(clean_calib_tests
   tests/test_image_io.cpp
   tests/test_camera_types.cpp
   tests/test_image_utils.cpp
+  tests/test_projection.cpp
 )
 target_link_libraries(clean_calib_tests PRIVATE clean_calib)
 enable_testing()

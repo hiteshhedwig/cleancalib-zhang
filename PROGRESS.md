@@ -44,10 +44,10 @@ Legend: `[x]` done · `[ ]` pending · `[~]` partially done
 - [ ] Tests for square spacing
 
 ## Milestone 5 — Pinhole projection without distortion
-- [ ] World → camera transform via `Pose`
-- [ ] Perspective divide
-- [ ] Apply `CameraIntrinsics` (with skew)
-- [ ] Tests with known cameras (identity pose, axis-aligned offsets)
+- [x] World → camera transform via `Pose`
+- [x] Perspective divide
+- [x] Apply `CameraIntrinsics` (with skew)
+- [x] Tests with known cameras (identity pose, axis-aligned offsets)
 
 ## Milestone 6 — Brown-Conrady distortion model
 - [ ] Radial term `k1, k2, k3`

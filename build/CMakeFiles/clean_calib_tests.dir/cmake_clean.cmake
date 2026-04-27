@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/clean_calib_tests.dir/tests/test_image_utils.cpp.o.d"
   "CMakeFiles/clean_calib_tests.dir/tests/test_main.cpp.o"
   "CMakeFiles/clean_calib_tests.dir/tests/test_main.cpp.o.d"
+  "CMakeFiles/clean_calib_tests.dir/tests/test_projection.cpp.o"
+  "CMakeFiles/clean_calib_tests.dir/tests/test_projection.cpp.o.d"
   "clean_calib_tests"
   "clean_calib_tests.pdb"
 )

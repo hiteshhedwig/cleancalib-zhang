@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/clean_calib.dir/src/calib/projection.cpp.o"
+  "CMakeFiles/clean_calib.dir/src/calib/projection.cpp.o.d"
   "CMakeFiles/clean_calib.dir/src/image/image_io.cpp.o"
   "CMakeFiles/clean_calib.dir/src/image/image_io.cpp.o.d"
   "CMakeFiles/clean_calib.dir/src/image/image_utils.cpp.o"

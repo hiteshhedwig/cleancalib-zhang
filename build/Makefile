@@ -189,6 +189,30 @@ src/app/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_calib_cli.dir/build.make CMakeFiles/clean_calib_cli.dir/src/app/main.cpp.s
 .PHONY : src/app/main.cpp.s
 
+src/calib/projection.o: src/calib/projection.cpp.o
+.PHONY : src/calib/projection.o
+
+# target to build an object file
+src/calib/projection.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_calib.dir/build.make CMakeFiles/clean_calib.dir/src/calib/projection.cpp.o
+.PHONY : src/calib/projection.cpp.o
+
+src/calib/projection.i: src/calib/projection.cpp.i
+.PHONY : src/calib/projection.i
+
+# target to preprocess a source file
+src/calib/projection.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_calib.dir/build.make CMakeFiles/clean_calib.dir/src/calib/projection.cpp.i
+.PHONY : src/calib/projection.cpp.i
+
+src/calib/projection.s: src/calib/projection.cpp.s
+.PHONY : src/calib/projection.s
+
+# target to generate assembly for a file
+src/calib/projection.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_calib.dir/build.make CMakeFiles/clean_calib.dir/src/calib/projection.cpp.s
+.PHONY : src/calib/projection.cpp.s
+
 src/image/image_io.o: src/image/image_io.cpp.o
 .PHONY : src/image/image_io.o
 
@@ -381,6 +405,30 @@ tests/test_main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_calib_tests.dir/build.make CMakeFiles/clean_calib_tests.dir/tests/test_main.cpp.s
 .PHONY : tests/test_main.cpp.s
 
+tests/test_projection.o: tests/test_projection.cpp.o
+.PHONY : tests/test_projection.o
+
+# target to build an object file
+tests/test_projection.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_calib_tests.dir/build.make CMakeFiles/clean_calib_tests.dir/tests/test_projection.cpp.o
+.PHONY : tests/test_projection.cpp.o
+
+tests/test_projection.i: tests/test_projection.cpp.i
+.PHONY : tests/test_projection.i
+
+# target to preprocess a source file
+tests/test_projection.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_calib_tests.dir/build.make CMakeFiles/clean_calib_tests.dir/tests/test_projection.cpp.i
+.PHONY : tests/test_projection.cpp.i
+
+tests/test_projection.s: tests/test_projection.cpp.s
+.PHONY : tests/test_projection.s
+
+# target to generate assembly for a file
+tests/test_projection.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_calib_tests.dir/build.make CMakeFiles/clean_calib_tests.dir/tests/test_projection.cpp.s
+.PHONY : tests/test_projection.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -396,6 +444,9 @@ help:
 	@echo "... src/app/main.o"
 	@echo "... src/app/main.i"
 	@echo "... src/app/main.s"
+	@echo "... src/calib/projection.o"
+	@echo "... src/calib/projection.i"
+	@echo "... src/calib/projection.s"
 	@echo "... src/image/image_io.o"
 	@echo "... src/image/image_io.i"
 	@echo "... src/image/image_io.s"
@@ -420,6 +471,9 @@ help:
 	@echo "... tests/test_main.o"
 	@echo "... tests/test_main.i"
 	@echo "... tests/test_main.s"
+	@echo "... tests/test_projection.o"
+	@echo "... tests/test_projection.i"
+	@echo "... tests/test_projection.s"
 .PHONY : help
 
 

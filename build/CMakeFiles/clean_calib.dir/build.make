@@ -111,11 +111,26 @@ CMakeFiles/clean_calib.dir/src/synthetic/checkerboard.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/clean_calib.dir/src/synthetic/checkerboard.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hedwig/heetez/learning/3dcomputer_vision/in_c/zhang_calibration/clean-calib/src/synthetic/checkerboard.cpp -o CMakeFiles/clean_calib.dir/src/synthetic/checkerboard.cpp.s
 
+CMakeFiles/clean_calib.dir/src/calib/projection.cpp.o: CMakeFiles/clean_calib.dir/flags.make
+CMakeFiles/clean_calib.dir/src/calib/projection.cpp.o: /home/hedwig/heetez/learning/3dcomputer_vision/in_c/zhang_calibration/clean-calib/src/calib/projection.cpp
+CMakeFiles/clean_calib.dir/src/calib/projection.cpp.o: CMakeFiles/clean_calib.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hedwig/heetez/learning/3dcomputer_vision/in_c/zhang_calibration/clean-calib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/clean_calib.dir/src/calib/projection.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/clean_calib.dir/src/calib/projection.cpp.o -MF CMakeFiles/clean_calib.dir/src/calib/projection.cpp.o.d -o CMakeFiles/clean_calib.dir/src/calib/projection.cpp.o -c /home/hedwig/heetez/learning/3dcomputer_vision/in_c/zhang_calibration/clean-calib/src/calib/projection.cpp
+
+CMakeFiles/clean_calib.dir/src/calib/projection.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/clean_calib.dir/src/calib/projection.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hedwig/heetez/learning/3dcomputer_vision/in_c/zhang_calibration/clean-calib/src/calib/projection.cpp > CMakeFiles/clean_calib.dir/src/calib/projection.cpp.i
+
+CMakeFiles/clean_calib.dir/src/calib/projection.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/clean_calib.dir/src/calib/projection.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hedwig/heetez/learning/3dcomputer_vision/in_c/zhang_calibration/clean-calib/src/calib/projection.cpp -o CMakeFiles/clean_calib.dir/src/calib/projection.cpp.s
+
 # Object files for target clean_calib
 clean_calib_OBJECTS = \
 "CMakeFiles/clean_calib.dir/src/image/image_io.cpp.o" \
 "CMakeFiles/clean_calib.dir/src/image/image_utils.cpp.o" \
-"CMakeFiles/clean_calib.dir/src/synthetic/checkerboard.cpp.o"
+"CMakeFiles/clean_calib.dir/src/synthetic/checkerboard.cpp.o" \
+"CMakeFiles/clean_calib.dir/src/calib/projection.cpp.o"
 
 # External object files for target clean_calib
 clean_calib_EXTERNAL_OBJECTS =
@@ -123,9 +138,10 @@ clean_calib_EXTERNAL_OBJECTS =
 libclean_calib.a: CMakeFiles/clean_calib.dir/src/image/image_io.cpp.o
 libclean_calib.a: CMakeFiles/clean_calib.dir/src/image/image_utils.cpp.o
 libclean_calib.a: CMakeFiles/clean_calib.dir/src/synthetic/checkerboard.cpp.o
+libclean_calib.a: CMakeFiles/clean_calib.dir/src/calib/projection.cpp.o
 libclean_calib.a: CMakeFiles/clean_calib.dir/build.make
 libclean_calib.a: CMakeFiles/clean_calib.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/hedwig/heetez/learning/3dcomputer_vision/in_c/zhang_calibration/clean-calib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libclean_calib.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/hedwig/heetez/learning/3dcomputer_vision/in_c/zhang_calibration/clean-calib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libclean_calib.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/clean_calib.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/clean_calib.dir/link.txt --verbose=$(VERBOSE)
 

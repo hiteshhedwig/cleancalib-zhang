@@ -24,12 +24,14 @@ void register_checkerboard_tests();
 void register_image_io_tests();
 void register_camera_types_tests();
 void register_image_utils_tests();
+void register_projection_tests();
 
 int main() {
     register_checkerboard_tests();
     register_image_io_tests();
     register_camera_types_tests();
     register_image_utils_tests();
+    register_projection_tests();
 
     auto& tests = clean_calib::test::registry();
     int passed = 0;

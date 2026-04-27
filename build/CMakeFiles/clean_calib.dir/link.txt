@@ -1,2 +1,2 @@
-/usr/bin/ar qc libclean_calib.a CMakeFiles/clean_calib.dir/src/image/image_io.cpp.o CMakeFiles/clean_calib.dir/src/image/image_utils.cpp.o CMakeFiles/clean_calib.dir/src/synthetic/checkerboard.cpp.o
+/usr/bin/ar qc libclean_calib.a CMakeFiles/clean_calib.dir/src/image/image_io.cpp.o CMakeFiles/clean_calib.dir/src/image/image_utils.cpp.o CMakeFiles/clean_calib.dir/src/synthetic/checkerboard.cpp.o CMakeFiles/clean_calib.dir/src/calib/projection.cpp.o
 /usr/bin/ranlib libclean_calib.a
