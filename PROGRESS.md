@@ -56,11 +56,11 @@ Legend: `[x]` done · `[ ]` pending · `[~]` partially done
 - [x] Test: zero distortion ≡ pinhole projection
 
 ## Milestone 7 — Synthetic calibration dataset generator
-- [ ] Generate N camera poses around a target board
-- [ ] Project all corners per view
+- [x] Generate N camera poses around a target board
+- [x] Project all corners per view
 - [ ] Optional Gaussian pixel noise
-- [ ] Save correspondences as plain text (`.txt` / `.csv`)
-- [ ] Reload and verify
+- [x] Save correspondences as plain text (`.txt` / `.csv`)
+- [x] Reload and verify
 
 ## Milestone 8 — Homography estimation
 - [ ] Hartley point normalisation

@@ -14,6 +14,8 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/hedwig/heetez/learning/3dcomputer_vision/in_c/zhang_calibration/clean-calib/tests/test_image_utils.cpp" "CMakeFiles/clean_calib_tests.dir/tests/test_image_utils.cpp.o" "gcc" "CMakeFiles/clean_calib_tests.dir/tests/test_image_utils.cpp.o.d"
   "/home/hedwig/heetez/learning/3dcomputer_vision/in_c/zhang_calibration/clean-calib/tests/test_main.cpp" "CMakeFiles/clean_calib_tests.dir/tests/test_main.cpp.o" "gcc" "CMakeFiles/clean_calib_tests.dir/tests/test_main.cpp.o.d"
   "/home/hedwig/heetez/learning/3dcomputer_vision/in_c/zhang_calibration/clean-calib/tests/test_projection.cpp" "CMakeFiles/clean_calib_tests.dir/tests/test_projection.cpp.o" "gcc" "CMakeFiles/clean_calib_tests.dir/tests/test_projection.cpp.o.d"
+  "/home/hedwig/heetez/learning/3dcomputer_vision/in_c/zhang_calibration/clean-calib/tests/test_synthetic_dataset.cpp" "CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset.cpp.o" "gcc" "CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset.cpp.o.d"
+  "/home/hedwig/heetez/learning/3dcomputer_vision/in_c/zhang_calibration/clean-calib/tests/test_synthetic_dataset_io.cpp" "CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset_io.cpp.o" "gcc" "CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset_io.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

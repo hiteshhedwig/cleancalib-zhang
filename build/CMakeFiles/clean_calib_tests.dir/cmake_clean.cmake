@@ -11,6 +11,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/clean_calib_tests.dir/tests/test_main.cpp.o.d"
   "CMakeFiles/clean_calib_tests.dir/tests/test_projection.cpp.o"
   "CMakeFiles/clean_calib_tests.dir/tests/test_projection.cpp.o.d"
+  "CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset.cpp.o"
+  "CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset.cpp.o.d"
+  "CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset_io.cpp.o"
+  "CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset_io.cpp.o.d"
   "clean_calib_tests"
   "clean_calib_tests.pdb"
 )

@@ -285,6 +285,54 @@ src/synthetic/checkerboard.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_calib.dir/build.make CMakeFiles/clean_calib.dir/src/synthetic/checkerboard.cpp.s
 .PHONY : src/synthetic/checkerboard.cpp.s
 
+src/synthetic/dataset.o: src/synthetic/dataset.cpp.o
+.PHONY : src/synthetic/dataset.o
+
+# target to build an object file
+src/synthetic/dataset.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_calib.dir/build.make CMakeFiles/clean_calib.dir/src/synthetic/dataset.cpp.o
+.PHONY : src/synthetic/dataset.cpp.o
+
+src/synthetic/dataset.i: src/synthetic/dataset.cpp.i
+.PHONY : src/synthetic/dataset.i
+
+# target to preprocess a source file
+src/synthetic/dataset.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_calib.dir/build.make CMakeFiles/clean_calib.dir/src/synthetic/dataset.cpp.i
+.PHONY : src/synthetic/dataset.cpp.i
+
+src/synthetic/dataset.s: src/synthetic/dataset.cpp.s
+.PHONY : src/synthetic/dataset.s
+
+# target to generate assembly for a file
+src/synthetic/dataset.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_calib.dir/build.make CMakeFiles/clean_calib.dir/src/synthetic/dataset.cpp.s
+.PHONY : src/synthetic/dataset.cpp.s
+
+src/synthetic/dataset_io.o: src/synthetic/dataset_io.cpp.o
+.PHONY : src/synthetic/dataset_io.o
+
+# target to build an object file
+src/synthetic/dataset_io.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_calib.dir/build.make CMakeFiles/clean_calib.dir/src/synthetic/dataset_io.cpp.o
+.PHONY : src/synthetic/dataset_io.cpp.o
+
+src/synthetic/dataset_io.i: src/synthetic/dataset_io.cpp.i
+.PHONY : src/synthetic/dataset_io.i
+
+# target to preprocess a source file
+src/synthetic/dataset_io.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_calib.dir/build.make CMakeFiles/clean_calib.dir/src/synthetic/dataset_io.cpp.i
+.PHONY : src/synthetic/dataset_io.cpp.i
+
+src/synthetic/dataset_io.s: src/synthetic/dataset_io.cpp.s
+.PHONY : src/synthetic/dataset_io.s
+
+# target to generate assembly for a file
+src/synthetic/dataset_io.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_calib.dir/build.make CMakeFiles/clean_calib.dir/src/synthetic/dataset_io.cpp.s
+.PHONY : src/synthetic/dataset_io.cpp.s
+
 tests/test_camera_types.o: tests/test_camera_types.cpp.o
 .PHONY : tests/test_camera_types.o
 
@@ -429,6 +477,54 @@ tests/test_projection.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_calib_tests.dir/build.make CMakeFiles/clean_calib_tests.dir/tests/test_projection.cpp.s
 .PHONY : tests/test_projection.cpp.s
 
+tests/test_synthetic_dataset.o: tests/test_synthetic_dataset.cpp.o
+.PHONY : tests/test_synthetic_dataset.o
+
+# target to build an object file
+tests/test_synthetic_dataset.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_calib_tests.dir/build.make CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset.cpp.o
+.PHONY : tests/test_synthetic_dataset.cpp.o
+
+tests/test_synthetic_dataset.i: tests/test_synthetic_dataset.cpp.i
+.PHONY : tests/test_synthetic_dataset.i
+
+# target to preprocess a source file
+tests/test_synthetic_dataset.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_calib_tests.dir/build.make CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset.cpp.i
+.PHONY : tests/test_synthetic_dataset.cpp.i
+
+tests/test_synthetic_dataset.s: tests/test_synthetic_dataset.cpp.s
+.PHONY : tests/test_synthetic_dataset.s
+
+# target to generate assembly for a file
+tests/test_synthetic_dataset.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_calib_tests.dir/build.make CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset.cpp.s
+.PHONY : tests/test_synthetic_dataset.cpp.s
+
+tests/test_synthetic_dataset_io.o: tests/test_synthetic_dataset_io.cpp.o
+.PHONY : tests/test_synthetic_dataset_io.o
+
+# target to build an object file
+tests/test_synthetic_dataset_io.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_calib_tests.dir/build.make CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset_io.cpp.o
+.PHONY : tests/test_synthetic_dataset_io.cpp.o
+
+tests/test_synthetic_dataset_io.i: tests/test_synthetic_dataset_io.cpp.i
+.PHONY : tests/test_synthetic_dataset_io.i
+
+# target to preprocess a source file
+tests/test_synthetic_dataset_io.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_calib_tests.dir/build.make CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset_io.cpp.i
+.PHONY : tests/test_synthetic_dataset_io.cpp.i
+
+tests/test_synthetic_dataset_io.s: tests/test_synthetic_dataset_io.cpp.s
+.PHONY : tests/test_synthetic_dataset_io.s
+
+# target to generate assembly for a file
+tests/test_synthetic_dataset_io.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_calib_tests.dir/build.make CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset_io.cpp.s
+.PHONY : tests/test_synthetic_dataset_io.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -456,6 +552,12 @@ help:
 	@echo "... src/synthetic/checkerboard.o"
 	@echo "... src/synthetic/checkerboard.i"
 	@echo "... src/synthetic/checkerboard.s"
+	@echo "... src/synthetic/dataset.o"
+	@echo "... src/synthetic/dataset.i"
+	@echo "... src/synthetic/dataset.s"
+	@echo "... src/synthetic/dataset_io.o"
+	@echo "... src/synthetic/dataset_io.i"
+	@echo "... src/synthetic/dataset_io.s"
 	@echo "... tests/test_camera_types.o"
 	@echo "... tests/test_camera_types.i"
 	@echo "... tests/test_camera_types.s"
@@ -474,6 +576,12 @@ help:
 	@echo "... tests/test_projection.o"
 	@echo "... tests/test_projection.i"
 	@echo "... tests/test_projection.s"
+	@echo "... tests/test_synthetic_dataset.o"
+	@echo "... tests/test_synthetic_dataset.i"
+	@echo "... tests/test_synthetic_dataset.s"
+	@echo "... tests/test_synthetic_dataset_io.o"
+	@echo "... tests/test_synthetic_dataset_io.i"
+	@echo "... tests/test_synthetic_dataset_io.s"
 .PHONY : help
 
 

@@ -153,6 +153,34 @@ CMakeFiles/clean_calib_tests.dir/tests/test_projection.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/clean_calib_tests.dir/tests/test_projection.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hedwig/heetez/learning/3dcomputer_vision/in_c/zhang_calibration/clean-calib/tests/test_projection.cpp -o CMakeFiles/clean_calib_tests.dir/tests/test_projection.cpp.s
 
+CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset.cpp.o: CMakeFiles/clean_calib_tests.dir/flags.make
+CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset.cpp.o: /home/hedwig/heetez/learning/3dcomputer_vision/in_c/zhang_calibration/clean-calib/tests/test_synthetic_dataset.cpp
+CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset.cpp.o: CMakeFiles/clean_calib_tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hedwig/heetez/learning/3dcomputer_vision/in_c/zhang_calibration/clean-calib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset.cpp.o -MF CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset.cpp.o.d -o CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset.cpp.o -c /home/hedwig/heetez/learning/3dcomputer_vision/in_c/zhang_calibration/clean-calib/tests/test_synthetic_dataset.cpp
+
+CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hedwig/heetez/learning/3dcomputer_vision/in_c/zhang_calibration/clean-calib/tests/test_synthetic_dataset.cpp > CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset.cpp.i
+
+CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hedwig/heetez/learning/3dcomputer_vision/in_c/zhang_calibration/clean-calib/tests/test_synthetic_dataset.cpp -o CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset.cpp.s
+
+CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset_io.cpp.o: CMakeFiles/clean_calib_tests.dir/flags.make
+CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset_io.cpp.o: /home/hedwig/heetez/learning/3dcomputer_vision/in_c/zhang_calibration/clean-calib/tests/test_synthetic_dataset_io.cpp
+CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset_io.cpp.o: CMakeFiles/clean_calib_tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/hedwig/heetez/learning/3dcomputer_vision/in_c/zhang_calibration/clean-calib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset_io.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset_io.cpp.o -MF CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset_io.cpp.o.d -o CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset_io.cpp.o -c /home/hedwig/heetez/learning/3dcomputer_vision/in_c/zhang_calibration/clean-calib/tests/test_synthetic_dataset_io.cpp
+
+CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset_io.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset_io.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/hedwig/heetez/learning/3dcomputer_vision/in_c/zhang_calibration/clean-calib/tests/test_synthetic_dataset_io.cpp > CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset_io.cpp.i
+
+CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset_io.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset_io.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/hedwig/heetez/learning/3dcomputer_vision/in_c/zhang_calibration/clean-calib/tests/test_synthetic_dataset_io.cpp -o CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset_io.cpp.s
+
 # Object files for target clean_calib_tests
 clean_calib_tests_OBJECTS = \
 "CMakeFiles/clean_calib_tests.dir/tests/test_main.cpp.o" \
@@ -160,7 +188,9 @@ clean_calib_tests_OBJECTS = \
 "CMakeFiles/clean_calib_tests.dir/tests/test_image_io.cpp.o" \
 "CMakeFiles/clean_calib_tests.dir/tests/test_camera_types.cpp.o" \
 "CMakeFiles/clean_calib_tests.dir/tests/test_image_utils.cpp.o" \
-"CMakeFiles/clean_calib_tests.dir/tests/test_projection.cpp.o"
+"CMakeFiles/clean_calib_tests.dir/tests/test_projection.cpp.o" \
+"CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset.cpp.o" \
+"CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset_io.cpp.o"
 
 # External object files for target clean_calib_tests
 clean_calib_tests_EXTERNAL_OBJECTS =
@@ -171,10 +201,12 @@ clean_calib_tests: CMakeFiles/clean_calib_tests.dir/tests/test_image_io.cpp.o
 clean_calib_tests: CMakeFiles/clean_calib_tests.dir/tests/test_camera_types.cpp.o
 clean_calib_tests: CMakeFiles/clean_calib_tests.dir/tests/test_image_utils.cpp.o
 clean_calib_tests: CMakeFiles/clean_calib_tests.dir/tests/test_projection.cpp.o
+clean_calib_tests: CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset.cpp.o
+clean_calib_tests: CMakeFiles/clean_calib_tests.dir/tests/test_synthetic_dataset_io.cpp.o
 clean_calib_tests: CMakeFiles/clean_calib_tests.dir/build.make
 clean_calib_tests: libclean_calib.a
 clean_calib_tests: CMakeFiles/clean_calib_tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/hedwig/heetez/learning/3dcomputer_vision/in_c/zhang_calibration/clean-calib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable clean_calib_tests"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/hedwig/heetez/learning/3dcomputer_vision/in_c/zhang_calibration/clean-calib/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable clean_calib_tests"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/clean_calib_tests.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

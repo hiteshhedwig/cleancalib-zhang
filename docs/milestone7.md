@@ -1,0 +1,13 @@
+## Milestone 7 — Synthetic calibration dataset generator
+- [x] Add synthetic dataset data structures
+- [x] Project one board for one pose
+- [x] Generate dataset from board config + camera model + poses
+- [x] Fail cleanly if any projected point has Z <= 0
+- [x] Tests: object point count
+- [x] Tests: one pose creates one view
+- [x] Tests: first board point projects to principal point
+- [x] Tests: translated pose shifts projected point
+- [x] Tests: invalid pose fails
+- [ ] Optional Gaussian pixel noise
+- [x] Save correspondences as plain text
+- [x] Reload and verify
