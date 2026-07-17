@@ -15,6 +15,14 @@ struct TestCase {
 
 std::vector<TestCase>& registry();
 
+inline bool values_are_near(double a, double b, double tolerance) {
+    return std::isfinite(a) &&
+           std::isfinite(b) &&
+           std::isfinite(tolerance) &&
+           tolerance >= 0.0 &&
+           std::abs(a - b) <= tolerance;
+}
+
 struct AutoRegister {
     AutoRegister(const char* name, std::function<void(std::string&)> fn) {
         registry().push_back({name, std::move(fn)});
@@ -46,9 +54,10 @@ struct AutoRegister {
 #define CC_EXPECT_NEAR(a, b, tol) do { \
     double _va = static_cast<double>(a); \
     double _vb = static_cast<double>(b); \
-    if (std::abs(_va - _vb) > (tol)) { \
+    double _vtol = static_cast<double>(tol); \
+    if (!clean_calib::test::values_are_near(_va, _vb, _vtol)) { \
         std::ostringstream _oss; \
-        _oss << "expected |" #a " - " #b "| <= " << (tol) \
+        _oss << "expected finite values with |" #a " - " #b "| <= " << _vtol \
              << " (got " << _va << " vs " << _vb << ")"; \
         _err = _oss.str(); return; \
     } \

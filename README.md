@@ -111,3 +111,7 @@ reprojection error looks bad, you need to know which step is wrong.
 Building each step on its own — image I/O, projection, homography,
 Zhang init, refinement — and testing each one in isolation, makes
 debugging tractable. See `PROGRESS.md` for the full milestone list.
+
+Before starting a milestone, use the [study guides](docs/README.md) for its
+prerequisites, derivations, practice exercises, implementation stages, tests,
+and focused resources.

@@ -27,6 +27,7 @@ void register_image_utils_tests();
 void register_projection_tests();
 void register_synthetic_dataset_tests();
 void register_synthetic_dataset_io_tests();
+void register_harness_tests();
 
 int main() {
     register_checkerboard_tests();
@@ -36,6 +37,7 @@ int main() {
     register_projection_tests();
     register_synthetic_dataset_tests();
     register_synthetic_dataset_io_tests();
+    register_harness_tests();
 
     auto& tests = clean_calib::test::registry();
     int passed = 0;

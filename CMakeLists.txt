@@ -77,7 +77,24 @@ add_executable(clean_calib_tests
   tests/test_projection.cpp
   tests/test_synthetic_dataset.cpp
   tests/test_synthetic_dataset_io.cpp
+  tests/test_harness_tests.cpp
 )
 target_link_libraries(clean_calib_tests PRIVATE clean_calib)
 enable_testing()
 add_test(NAME unit_tests COMMAND clean_calib_tests)
+
+# ---------------------------------------------------------------------------
+# Learning exercises — opt in so unfinished practice never blocks the project.
+# ---------------------------------------------------------------------------
+option(CLEAN_CALIB_BUILD_PRACTICE "Build standalone learning exercises" OFF)
+if(CLEAN_CALIB_BUILD_PRACTICE)
+  add_subdirectory(practice)
+endif()
+
+# ---------------------------------------------------------------------------
+# Visual milestone demos — opt in; generated artifacts go to examples/output.
+# ---------------------------------------------------------------------------
+option(CLEAN_CALIB_BUILD_DEMOS "Build visual milestone demos" OFF)
+if(CLEAN_CALIB_BUILD_DEMOS)
+  add_subdirectory(examples/demos)
+endif()
