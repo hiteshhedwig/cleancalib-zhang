@@ -6,6 +6,10 @@ feature coverage; the goal is **clarity, readability, and educational
 value**. Most calibration code is buried inside large libraries — this
 project tries to make every step inspectable.
 
+<p align="center">
+  <img src="docs/assets/clean-calib-overview.svg" alt="clean-calib camera calibration pipeline" width="100%">
+</p>
+
 ## What this project is
 
 - An end-to-end implementation of single-camera calibration:
