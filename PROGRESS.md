@@ -63,38 +63,38 @@ Legend: `[x]` done · `[ ]` pending · `[~]` partially done
 - [x] Reload and verify
 
 ## Milestone 8 — Homography estimation
-- [ ] Hartley point normalisation
-- [ ] DLT 2D→2D homography
-- [ ] SVD solve via Eigen
-- [ ] Reprojection-error tests on synthetic data
+- [x] Hartley point normalisation
+- [x] DLT 2D→2D homography
+- [x] SVD solve via Eigen
+- [x] Reprojection-error tests on synthetic data
 
 ## Milestone 9 — Zhang closed-form initialisation
-- [ ] Build the `V` matrix from per-view homographies
-- [ ] Solve for `b` (vec(B)) via SVD
-- [ ] Recover `K` from `B`
-- [ ] Per-view `(R, t)` from `K^{-1} H`
-- [ ] Project rotation to nearest valid `SO(3)` via SVD
-- [ ] Test on synthetic zero-distortion data: recovered `K` ≈ ground truth
+- [x] Build the `V` matrix from per-view homographies
+- [x] Solve for `b` (vec(B)) via SVD
+- [x] Recover `K` from `B`
+- [x] Per-view `(R, t)` from `K^{-1} H`
+- [x] Project rotation to nearest valid `SO(3)` via SVD
+- [x] Test on synthetic zero-distortion data: recovered `K` ≈ ground truth
 
 ## Milestone 10 — Nonlinear refinement
-- [ ] Reprojection residual function (intrinsics + distortion + poses)
-- [ ] Numeric Jacobian (central differences)
-- [ ] Gauss-Newton iteration
-- [ ] Levenberg-Marquardt with trust-region update
-- [ ] Refine all parameters jointly; record RMS reprojection error
+- [x] Reprojection residual function (intrinsics + distortion + poses)
+- [x] Numeric Jacobian (central differences)
+- [x] Gauss-Newton iteration
+- [x] Levenberg-Marquardt with trust-region update
+- [x] Refine all parameters jointly; record RMS reprojection error
 
 ## Milestone 11 — Checkerboard detection prep
-- [ ] Grayscale conversion (re-uses Milestone 2)
-- [ ] Sobel / central-difference gradients
-- [ ] Harris-style corner response
-- [ ] Save debug images of the response map
+- [x] Grayscale conversion (re-uses Milestone 2)
+- [x] Sobel / central-difference gradients
+- [x] Harris-style corner response
+- [x] Save debug images of the response map
 
 ## Milestone 12 — Checkerboard detection
-- [ ] Non-maximum suppression of corner candidates
-- [ ] Grid fitting to recover row/column structure
-- [ ] Canonical corner ordering
-- [ ] Subpixel refinement (local quadratic fit)
-- [ ] Reject detections with bad geometry
+- [x] Non-maximum suppression of corner candidates
+- [x] Grid fitting to recover row/column structure
+- [x] Canonical corner ordering
+- [x] Subpixel refinement (local quadratic fit)
+- [x] Reject detections with bad geometry
 
 ## Milestone 13 — Full real-image calibration CLI
 - [ ] `calibrate` command consuming a folder of images

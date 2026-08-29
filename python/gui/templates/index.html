@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>clean-calib · Calibration Lab</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand-mark">CC</div>
+    <div>
+      <div class="eyebrow">clean-calib</div>
+      <h1>Calibration Lab</h1>
+    </div>
+    <div id="health" class="health">Checking runtime…</div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <p class="eyebrow">From pixels to camera parameters</p>
+        <h2>Compare our calibration pipeline with OpenCV.</h2>
+        <p class="lede">Drop checkerboard images, set the inner-corner dimensions,
+          and inspect detection coverage, reprojection error, intrinsics, distortion,
+          and every view side by side.</p>
+      </div>
+      <div class="formula">H → K → R,t → LM</div>
+    </section>
+
+    <section class="workspace">
+      <form id="calibration-form" class="control-panel">
+        <div class="section-label">01 · Dataset</div>
+        <div id="drop-zone" class="drop-zone" tabindex="0">
+          <div class="drop-icon">＋</div>
+          <strong>Drop calibration images here</strong>
+          <span>JPEG, PNG, BMP, or TIFF · up to 200 images</span>
+          <div class="picker-row">
+            <label class="button secondary">Choose images
+              <input id="image-picker" type="file" accept="image/*" multiple hidden>
+            </label>
+            <label class="button secondary">Choose folder
+              <input id="folder-picker" type="file" accept="image/*" multiple
+                     webkitdirectory directory hidden>
+            </label>
+          </div>
+        </div>
+        <div id="file-summary" class="file-summary">No images selected</div>
+
+        <div class="section-label spaced">02 · Checkerboard</div>
+        <div class="fields">
+          <label>Inner rows<input id="rows" name="rows" type="number" min="2" value="7" required></label>
+          <label>Inner columns<input id="cols" name="cols" type="number" min="2" value="6" required></label>
+          <label>Square size<input id="square-size" name="square_size" type="number" min="0.000001" step="any" value="1" required></label>
+        </div>
+        <p class="hint">Square size controls translation units; pixel intrinsics do not depend on it.</p>
+        <button id="run-button" class="button primary" type="submit" disabled>
+          Run comparison <span>→</span>
+        </button>
+      </form>
+
+      <aside class="notes-panel">
+        <div class="section-label">How to read it</div>
+        <div class="note"><b>Detection</b><span>How many uploaded views produce a valid ordered grid.</span></div>
+        <div class="note"><b>RMS reprojection</b><span>Pixel distance between detected and model-projected corners. Lower is better.</span></div>
+        <div class="note"><b>Shared subset</b><span>The fair comparison using only views detected by both pipelines.</span></div>
+        <div class="privacy"><span>●</span> Local only<br><small>Uploads live in a temporary directory and are deleted after analysis.</small></div>
+      </aside>
+    </section>
+
+    <section id="status-panel" class="status-panel hidden"></section>
+
+    <section id="results" class="results hidden">
+      <div class="results-heading">
+        <div><p class="eyebrow">Analysis complete</p><h2>Calibration report</h2></div>
+        <button id="download-json" class="button secondary">Download JSON</button>
+      </div>
+      <div id="metric-cards" class="metric-cards"></div>
+
+      <div class="result-grid">
+        <article class="card wide">
+          <div class="card-heading"><h3>Shared-view reprojection RMS</h3><span>lower is better</span></div>
+          <div id="rms-comparison" class="bar-chart"></div>
+        </article>
+        <article class="card">
+          <div class="card-heading"><h3>Camera intrinsics</h3><span>pixels</span></div>
+          <div id="intrinsics-table"></div>
+        </article>
+        <article class="card">
+          <div class="card-heading"><h3>Distortion</h3><span>Brown–Conrady</span></div>
+          <div id="distortion-table"></div>
+        </article>
+        <article class="card full">
+          <div class="card-heading"><h3>Per-view RMS</h3><span>shared detections</span></div>
+          <div id="view-chart" class="view-chart"></div>
+        </article>
+        <article class="card full">
+          <div class="card-heading"><h3>Image-by-image results</h3><span id="image-count"></span></div>
+          <div class="table-scroll"><table id="image-table"></table></div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>clean-calib · inspectable Zhang calibration in C++17</footer>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

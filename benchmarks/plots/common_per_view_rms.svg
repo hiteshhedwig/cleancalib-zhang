@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1020" height="480" viewBox="0 0 1020 480" role="img">
+<rect width="1020" height="480" fill="#ffffff" rx="12"/>
+<text x="36" y="38" font-family="system-ui, sans-serif" font-size="22" font-weight="700" text-anchor="start" fill="#172033">Per-view calibration RMS on the shared 11-image subset</text>
+<text x="36" y="59" font-family="system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start" fill="#64748b">Lower is better; both methods calibrated independently on identical views</text>
+<line x1="70" y1="388.00" x2="992" y2="388.00" stroke="#dbe3ef" stroke-width="1"/>
+<text x="60" y="393.0" font-family="system-ui, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#64748b">0.00</text>
+<line x1="70" y1="335.00" x2="992" y2="335.00" stroke="#dbe3ef" stroke-width="1"/>
+<text x="60" y="340.0" font-family="system-ui, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#64748b">0.05</text>
+<line x1="70" y1="282.00" x2="992" y2="282.00" stroke="#dbe3ef" stroke-width="1"/>
+<text x="60" y="287.0" font-family="system-ui, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#64748b">0.10</text>
+<line x1="70" y1="229.00" x2="992" y2="229.00" stroke="#dbe3ef" stroke-width="1"/>
+<text x="60" y="233.99999999999997" font-family="system-ui, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#64748b">0.15</text>
+<line x1="70" y1="176.00" x2="992" y2="176.00" stroke="#dbe3ef" stroke-width="1"/>
+<text x="60" y="180.99999999999997" font-family="system-ui, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#64748b">0.20</text>
+<line x1="70" y1="123.00" x2="992" y2="123.00" stroke="#dbe3ef" stroke-width="1"/>
+<text x="60" y="127.99999999999999" font-family="system-ui, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#64748b">0.25</text>
+<line x1="70" y1="70.00" x2="992" y2="70.00" stroke="#dbe3ef" stroke-width="1"/>
+<text x="60" y="74.99999999999993" font-family="system-ui, sans-serif" font-size="11" font-weight="400" text-anchor="end" fill="#64748b">0.30</text>
+<rect x="88.44" y="190.53" width="23.47" height="197.47" fill="#2563eb" rx="2"/>
+<rect x="111.91" y="207.05" width="23.47" height="180.95" fill="#ea580c" rx="2"/>
+<text x="111.9090909090909" y="410" font-family="system-ui, sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#64748b">left01</text>
+<rect x="172.26" y="251.88" width="23.47" height="136.12" fill="#2563eb" rx="2"/>
+<rect x="195.73" y="264.60" width="23.47" height="123.40" fill="#ea580c" rx="2"/>
+<text x="195.72727272727272" y="410" font-family="system-ui, sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#64748b">left02</text>
+<rect x="256.08" y="187.19" width="23.47" height="200.81" fill="#2563eb" rx="2"/>
+<rect x="279.55" y="237.79" width="23.47" height="150.21" fill="#ea580c" rx="2"/>
+<text x="279.5454545454545" y="410" font-family="system-ui, sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#64748b">left03</text>
+<rect x="339.89" y="209.15" width="23.47" height="178.85" fill="#2563eb" rx="2"/>
+<rect x="363.36" y="204.43" width="23.47" height="183.57" fill="#ea580c" rx="2"/>
+<text x="363.3636363636364" y="410" font-family="system-ui, sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#64748b">left04</text>
+<rect x="423.71" y="184.63" width="23.47" height="203.37" fill="#2563eb" rx="2"/>
+<rect x="447.18" y="234.91" width="23.47" height="153.09" fill="#ea580c" rx="2"/>
+<text x="447.18181818181813" y="410" font-family="system-ui, sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#64748b">left05</text>
+<rect x="507.53" y="206.35" width="23.47" height="181.65" fill="#2563eb" rx="2"/>
+<rect x="531.00" y="249.39" width="23.47" height="138.61" fill="#ea580c" rx="2"/>
+<text x="531.0" y="410" font-family="system-ui, sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#64748b">left06</text>
+<rect x="591.35" y="206.94" width="23.47" height="181.06" fill="#2563eb" rx="2"/>
+<rect x="614.82" y="245.70" width="23.47" height="142.30" fill="#ea580c" rx="2"/>
+<text x="614.8181818181818" y="410" font-family="system-ui, sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#64748b">left07</text>
+<rect x="675.17" y="121.74" width="23.47" height="266.26" fill="#2563eb" rx="2"/>
+<rect x="698.64" y="170.27" width="23.47" height="217.73" fill="#ea580c" rx="2"/>
+<text x="698.6363636363636" y="410" font-family="system-ui, sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#64748b">left08</text>
+<rect x="758.99" y="220.32" width="23.47" height="167.68" fill="#2563eb" rx="2"/>
+<rect x="782.45" y="205.07" width="23.47" height="182.93" fill="#ea580c" rx="2"/>
+<text x="782.4545454545454" y="410" font-family="system-ui, sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#64748b">left12</text>
+<rect x="842.80" y="175.11" width="23.47" height="212.89" fill="#2563eb" rx="2"/>
+<rect x="866.27" y="236.31" width="23.47" height="151.69" fill="#ea580c" rx="2"/>
+<text x="866.2727272727273" y="410" font-family="system-ui, sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#64748b">left13</text>
+<rect x="926.62" y="219.32" width="23.47" height="168.68" fill="#2563eb" rx="2"/>
+<rect x="950.09" y="222.63" width="23.47" height="165.37" fill="#ea580c" rx="2"/>
+<text x="950.090909090909" y="410" font-family="system-ui, sans-serif" font-size="10" font-weight="400" text-anchor="middle" fill="#64748b">left14</text>
+<rect x="370" y="442" width="12" height="12" fill="#2563eb" rx="2"/>
+<text x="390" y="453" font-family="system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start" fill="#64748b">clean-calib</text>
+<rect x="500" y="442" width="12" height="12" fill="#ea580c" rx="2"/>
+<text x="520" y="453" font-family="system-ui, sans-serif" font-size="12" font-weight="400" text-anchor="start" fill="#64748b">OpenCV classic</text>
+</svg>

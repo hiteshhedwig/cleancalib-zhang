@@ -1,5 +1,8 @@
 DE.md
 history.txt
 build/*
+build-*/
+__pycache__/
+*.py[cod]
 GUIDE.md
 examples/output/

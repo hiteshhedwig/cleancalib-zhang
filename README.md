@@ -37,6 +37,9 @@ project tries to make every step inspectable.
 
 No OpenCV. No Ceres. No Sophus. No other image libraries.
 
+OpenCV is used only by an optional, separately built comparison benchmark; it
+is never linked into the library, CLI, or normal test suite.
+
 ## Build
 
 ```bash
@@ -57,6 +60,49 @@ Run the tests:
 ./build/clean_calib_tests
 ```
 
+## Real-image performance
+
+The current detector and calibration pipeline was evaluated on all 13 public
+640x480 OpenCV `left*.jpg` calibration images, using their 6x7-inner-corner
+checkerboard. This is the dataset checked into [`data/opencv_left`](data/opencv_left),
+not a synthetic test set.
+
+![Benchmark summary](benchmarks/plots/benchmark_summary.svg)
+
+| Metric | clean-calib | OpenCV 4.8 classic |
+|---|---:|---:|
+| Boards detected | **13/13** | 11/13 |
+| Detection success | **100.0%** | 84.6% |
+| Calibration RMS on the shared 11 views | 0.1821 px | **0.1554 px** |
+
+`clean-calib` detects two views missed by OpenCV's classic
+`findChessboardCorners`; OpenCV remains faster and gives about 0.027 px lower
+RMS on the identical 11-view subset. The full methodology, per-image plot,
+raw CSV measurements, machine details, and reproduction commands are in the
+[`benchmarks` report](benchmarks/README.md).
+
+## Python API and browser GUI
+
+An optional dependency-free CPython binding exposes the complete C++ detector
+and calibration pipeline as `clean_calib.calibrate(...)`. A local HTML GUI lets
+you upload images or select a folder and compare our results with OpenCV,
+including detection coverage, shared-view RMS, intrinsics, distortion,
+per-image error plots, timings, and downloadable JSON.
+
+```bash
+cmake -S . -B build-python \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DCLEAN_CALIB_BUILD_PYTHON=ON \
+  -DPython3_EXECUTABLE=/usr/bin/python3
+cmake --build build-python -j
+
+CLEAN_CALIB_PYTHON_PATH=build-python/python \
+  /usr/bin/python3 python/gui/app.py
+```
+
+Then open `http://127.0.0.1:5000`. See the [Python and GUI guide](python/README.md)
+for dependencies, API examples, returned metrics, and test behavior.
+
 ## First commands to try
 
 ```bash
@@ -76,12 +122,15 @@ Run the tests:
 clean-calib/
   external/stb/                — stb_image headers (user-supplied)
   include/clean_calib/
+    calib/                     — homography, Zhang initialization, refinement
     core/                      — Point2D, Point3D, Image, CameraModel, Pose
+    detection/                 — Harris response and checkerboard detector
     image/                     — image_io (load/save)
     synthetic/                 — checkerboard object-point generator
     util/                      — small utilities (Result, etc.)
   src/                         — implementation .cpp files
   tests/                       — independent unit tests
+  benchmarks/                  — optional OpenCV comparison and plots
   examples/                    — sample images & synthetic outputs
   data/                        — calibration datasets
 ```
